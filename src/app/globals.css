@@ -1,8 +1,88 @@
+@import "./calendar.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  /* Overrides the border radius setting in the theme. */
+  --ck-border-radius: 20px;
+}
+@layer base {
+  h2 {
+    @apply lg:text-52 lg:text-4xl text-2xl font-bold leading-normal;
+  }
+
+  h3 {
+    @apply lg:text-2xl text-xl font-bold leading-normal;
+  }
+}
+
+@layer components {
+  /* styles/editor.css */
+}
+
+@layer utilities {
+  .divider-left {
+    position: relative;
+  }
+
+  .divider-left::before {
+    flex: 1;
+    content: "";
+    position: absolute;
+    @apply top-5 -left-32 w-28 h-[0.5px];
+    background-color: #bbbbbb;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+  }
+  .divider::before,
+  .divider::after {
+    flex: 1;
+    content: "";
+    padding: 0.5px;
+    background-color: #bbbbbb;
+    /* margin: 25px; */
+  }
+
+  .divider::before {
+    margin-right: 20px;
+  }
+  .divider::after {
+    margin-left: 20px;
+  }
+
+  .custom-editor .ck-editor {
+    width: 100%;
+    @apply shadow-xl shadow-brown-coffee/10 rounded-3xl;
+  }
+  .custom-editor .ck-editor__editable {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .custom-editor .ck-content {
+    border-radius: 20px;
+  }
+
+  .custom-editor .ck-editor__editable:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(102, 175, 233, 0.6);
+  }
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +98,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
