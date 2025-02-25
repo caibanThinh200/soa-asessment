@@ -21,7 +21,7 @@ const images = [
 const Slider: React.FC<SliderProps> = ({ data }) => {
   const [swiper, setSwiper] = useState<SwiperType>();
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto lg:py-20 py-10">
       <div>
         <div className="flex justify-between items-center mb-10 flex-wrap gap-10">
           <h2 className="text-main-orange">

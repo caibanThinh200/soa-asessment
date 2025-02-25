@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
                   height={28}
                   alt="mountain"
                 />
-                <p className="text-white">{item}</p>
+                <p className="text-white text-center">{item}</p>
               </div>
             ))}
           </div>

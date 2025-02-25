@@ -44,7 +44,7 @@ const Booking: React.FC<BookingProps> = ({ data }) => {
   };
 
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto lg:py-20 py-10">
       <div className="flex flex-col gap-10">
         <h2 className="text-main-orange divider text-center lg:w-1/2 mx-auto mb-10">
           <span>{data?.title}</span>

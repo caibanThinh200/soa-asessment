@@ -21,7 +21,7 @@ const Cards: React.FC<CardProps> = ({ data }) => {
             <span className="lg:w-1/2">{data?.title}</span>
         </h2>
         <p className="lg:w-1/2 text-center">{data?.subtitle}</p>
-        <div className="grid lg:grid-cols-3 gap-8 mt-24">
+        <div className="grid lg:grid-cols-3 gap-8 lg:mt-24 mt-0">
           {data?.cases.map((caseItem, idx) => (
             <div
               key={caseItem?.tagline}
