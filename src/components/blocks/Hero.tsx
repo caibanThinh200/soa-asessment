@@ -11,7 +11,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ data }) => {
   const icons = ["/svg/mountain.svg", "/svg/whale.svg", "/svg/aim.svg"];
   return (
-    <div className="relative h-[110vh]">
+    <div className="relative lg:h-[100vh] h-screen">
       <div className="absolute w-full h-full inset-0">
         <video
           controls={false}
@@ -37,9 +37,9 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
           />
         </video>
       </div>
-      <div className="relative z-10 h-full w-full lg:p-20 p-10 pb-16 bg-gradient-to-t from-[rgba(0,0,0,0.30)_14.5%] to-[rgba(0,0,0,0.00)_27%]">
+      <div className="relative z-10 h-full w-full lg:p-20 py-10  pb-16 bg-gradient-to-t from-[rgba(0,0,0,0.30)_14.5%] to-[rgba(0,0,0,0.00)_27%]">
         <div className="flex flex-col justify-end size-full">
-          <div className="flex justify-around items-center">
+          <div className="flex md:justify-around justify-between items-center">
             {data?.map((item, index) => (
               <motion.div
                 key={item}
@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
                   alt="mountain"
                   className="group-hover:scale-125 transition duration-300 ease-in-out"
                 />
-                <p className="text-white text-center">{item}</p>
+                <p className="text-white md:text-base text-xs text-center w-5/6">{item}</p>
               </motion.div>
             ))}
           </div>

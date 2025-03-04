@@ -74,7 +74,7 @@ const Map: React.FC<MapProps> = ({ data, mark }) => {
                 </Button>
               ))}
             </div>
-            <div className="relative w-full lg:h-[500px] h-[300px] rounded-2xl mt-10 overflow-hidden">
+            <div className="relative w-full md:h-[500px] h-[200px] rounded-2xl mt-10 overflow-hidden">
               <div className="absolute w-full h-full inset-0">
                 <Image
                   src="/images/map.png"

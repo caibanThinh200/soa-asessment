@@ -143,6 +143,7 @@ export const PinMountain = () => {
       viewBox="0 0 52 62"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="scale-75 md:scale-100"
     >
       <g filter="url(#filter0_d_2367_428)">
         <path
@@ -208,6 +209,7 @@ export const PinFish = () => (
     viewBox="0 0 52 62"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+     className="scale-75 md:scale-100"
   >
     <g filter="url(#filter0_d_2367_423)">
       <path
@@ -272,6 +274,7 @@ export const PinAim = () => (
     viewBox="0 0 52 62"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="scale-75 md:scale-100"
   >
     <g filter="url(#filter0_d_2367_418)">
       <path
