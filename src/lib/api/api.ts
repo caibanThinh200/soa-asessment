@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const api = axios.create({
   baseURL:
+    // Use default value incase the env variable is not set
     process.env.NEXT_PUBLIC_API_URL || "https://api.test.soa-dev.net/api/v1",
 });
 

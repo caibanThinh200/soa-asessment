@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 import { getPageLang } from "@/lib/api/lang";
+import Image from "next/image";
+import Chat from "@/components/ui/Chat";
 
 const Booking = dynamic(() => import("@/components/blocks/Booking"));
 const Hero = dynamic(() => import("@/components/blocks/Hero"));
@@ -19,6 +21,7 @@ export default async function Home({
   const pageData = await getPageLang(locale as "en" | "fr");
   return (
     <main>
+      <Chat />
       <Hero data={pageData?.banner_title} />
       <Cards data={pageData?.bloc_1} />
       <Map mark={pageData?.carte_point} data={pageData?.bloc_2} />
