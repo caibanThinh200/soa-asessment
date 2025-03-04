@@ -1,5 +1,4 @@
-// components/custom-editor.js
-"use client"; // only in App Router
+"use client";
 
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import { ClassicEditor, Essentials, Paragraph, Bold, Italic } from "ckeditor5";

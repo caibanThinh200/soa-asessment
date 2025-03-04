@@ -1,14 +1,14 @@
 import dynamic from "next/dynamic";
 import { getPageLang } from "@/lib/api/lang";
-import Slider from "@/components/blocks/Slider";
-import { Carousel } from "@/components/blocks/Carousel";
-import Explore from "@/components/blocks/Explore";
-import Content from "@/components/blocks/Content";
 
 const Booking = dynamic(() => import("@/components/blocks/Booking"));
 const Hero = dynamic(() => import("@/components/blocks/Hero"));
 const Cards = dynamic(() => import("@/components/blocks/Cards"));
 const Map = dynamic(() => import("@/components/blocks/Map"));
+const Slider = dynamic(() => import("@/components/blocks/Slider"));
+const Carousel = dynamic(() => import("@/components/blocks/Carousel"));
+const Explore = dynamic(() => import("@/components/blocks/Explore"));
+const Content = dynamic(() => import("@/components/blocks/Content"));
 
 export default async function Home({
   params,

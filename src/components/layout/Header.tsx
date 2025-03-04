@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Page } from "@/types/page";
+import { motion } from "motion/react";
 import Drawer from "react-modern-drawer";
 
 interface HeaderProps {
@@ -29,14 +30,38 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
               Logo sample
             </Link>
           </div>
-          <div className="flex 2xl:gap-10 gap-5 items-center">
-            {data?.map((item) => (
-              <Link key={item} className="font-medium text-white" href="/">
-                {item}
-              </Link>
+          <ul className="flex 2xl:gap-10 gap-5 items-center">
+            {data?.map((item, idx) => (
+              <motion.li
+                key={item}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                  delay: 0.2 * (idx + 1),
+                }}
+              >
+                <Link
+                  className="font-medium text-white hover:text-main-orange transition-colors duration-300"
+                  href="/"
+                >
+                  {item}
+                </Link>
+              </motion.li>
             ))}
-          </div>
-          <div className="flex gap-4 items-center">
+          </ul>
+          <motion.div
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              delay: data?.length * 0.2,
+            }}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="flex gap-4 items-center"
+          >
             <Image
               src="/svg/mountain.svg"
               width={28}
@@ -107,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                 />
               </Link>
             </label> */}
-          </div>
+          </motion.div>
         </div>
         <div className="items-center justify-between lg:hidden flex">
           <div className="text-white flex items-center">
@@ -127,20 +152,20 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                 <path
                   d="M3 7H21"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M3 12H21"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M3 17H21"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
                 />
               </svg>
             </button>
@@ -163,23 +188,43 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                   </button>
                 </div>
                 <div className="flex flex-col gap-5">
-                  <div className="flex 2xl:gap-10 flex-col gap-5 items-center">
-                    {data?.map((item) => (
-                      <Link
-                        onClick={(e) => {
-                          // e.preventDefault();
-                          setIsOpen(false);
-                          // router.push(item.href);
-                        }}
+                  <ul className="flex 2xl:gap-10 flex-col gap-5 items-center">
+                    {data?.map((item, idx) => (
+                      <motion.li
                         key={item}
-                        className="font-medium "
-                        href="/"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: isOpen ? 1 : 0 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 20,
+                          delay: 0.2 * (idx + 1),
+                        }}
                       >
-                        {item}
-                      </Link>
+                        <Link
+                          onClick={(e) => {
+                            // e.preventDefault();
+                            setIsOpen(false);
+                            // router.push(item.href);
+                          }}
+                          className="font-medium hover:text-main-orange transition-colors"
+                          href="/"
+                        >
+                          {item}
+                        </Link>
+                      </motion.li>
                     ))}
-                  </div>
-                  <div className="flex gap-4 items-center">
+                  </ul>
+                  <motion.div
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      delay: data?.length * 0.2,
+                    }}
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={isOpen && { y: 0, opacity: 1 }}
+                    className="flex gap-4 items-center"
+                  >
                     <Image
                       src="/svg/mountain.svg"
                       width={28}
@@ -242,7 +287,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                         alt="arrow up"
                       />
                     </button>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </Drawer>

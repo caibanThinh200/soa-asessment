@@ -15,8 +15,11 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
           autoPlay={true}
           loop
           className="w-full h-full object-cover"
+          muted
+          poster="/images/hero-poster.png"
+          playsInline
         >
-          <source src="/video/hero.mov" type="video/mp4" />
+          <source src="/video/hero.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="absolute lg:bottom-10 lg:right-20 bottom-5 right-5 z-20">

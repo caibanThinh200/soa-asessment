@@ -4,8 +4,7 @@ import Image from "next/image";
 interface CarouselProps {
   data: Page["bloc_4"];
 }
-
-export const Carousel = ({ data }: CarouselProps) => {
+const Carousel = ({ data }: CarouselProps) => {
   const icons = [
     "/svg/service-1.svg",
     "/svg/service-2.svg",
@@ -68,3 +67,5 @@ export const Carousel = ({ data }: CarouselProps) => {
     </div>
   );
 };
+
+export default Carousel;

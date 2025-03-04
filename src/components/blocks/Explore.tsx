@@ -41,7 +41,7 @@ const Explore: React.FC<ExploreProps> = ({ data }) => {
           className="mySwiper2 mb-10"
         >
           {data?.reviews?.map((review, idx) => (
-            <SwiperSlide key={review?.review}>
+            <SwiperSlide key={idx}>
               <div className="relative h-fit flex items-center flex-col justify-center rounded-lg lg:p-20 p-5">
                 <div className="absolute size-full inset-0 rounded-lg overflow-hidden">
                   <Image
@@ -90,7 +90,7 @@ const Explore: React.FC<ExploreProps> = ({ data }) => {
           className="mySwiper"
         >
           {data?.reviews?.map((review, idx) => (
-            <SwiperSlide key={review?.review}>
+            <SwiperSlide key={idx}>
               <div className="relative lg:h-[250px] md:h-[165px] h-[70px] rounded-lg overflow-hidden">
                 {/* <Image /> */}
                 <Image

@@ -152,7 +152,7 @@ export const PinMountain = () => {
         <path
           d="M15.0506 13.1863C17.9576 10.1884 21.8957 8.50496 26 8.5C30.1043 8.50496 34.0424 10.1884 36.9494 13.1863C39.8571 16.1849 41.4953 20.2537 41.5 24.5007C41.4999 27.3308 40.5042 30.2713 38.948 33.2686C37.3952 36.2596 35.3052 39.2686 33.151 42.2395C32.7033 42.7738 32.2797 43.2937 31.8672 43.8C30.1936 45.8538 28.7041 47.6818 26.5445 49.3265C26.3851 49.4402 26.1978 49.5 26.0073 49.5C25.8167 49.5 25.6293 49.4402 25.4699 49.3264C23.3037 47.6804 21.8091 45.85 20.1294 43.7928C19.7179 43.2888 19.2953 42.7712 18.8489 42.2393C16.694 39.2685 14.6041 36.2595 13.0515 33.2686C11.4955 30.2712 10.5001 27.3306 10.5 24.5004C10.5047 20.2535 12.1429 16.1849 15.0506 13.1863Z"
           stroke="white"
-          stroke-opacity="0.4"
+          strokeOpacity="0.4"
         />
         <rect x="14" y="12" width="24" height="24" rx="12" fill="white" />
         <path
@@ -168,9 +168,9 @@ export const PinMountain = () => {
           width="68"
           height="77"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
