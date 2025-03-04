@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
   return (
     <div className="bg-brown-coffee/70 backdrop-blur-[0.7] absolute w-full h-fit inset-0 z-40">
       <div className="container py-5 mx-auto">
-        <div className=" justify-between gap-10 items-center lg:flex hidden">
+        <div className=" justify-between gap-10 items-center min-[1025px]:flex hidden">
           <div className="text-white flex items-center">
             <Link href="/" className="uppercase font-bold">
               Logo sample
@@ -147,7 +147,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
             </label> */}
           </motion.div>
         </div>
-        <div className="items-center justify-between lg:hidden flex">
+        <div className="items-center justify-between min-[1025px]:hidden flex">
           <div className="text-white flex items-center">
             <Link href="/" className="uppercase font-bold">
               Logo sample
@@ -200,7 +200,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                     />
                   </button>
                 </div>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 items-center ">
                   <ul className="flex 2xl:gap-10 flex-col gap-5 items-center">
                     {data?.map((item, idx) => (
                       <motion.li

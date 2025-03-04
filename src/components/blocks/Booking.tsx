@@ -181,7 +181,7 @@ const Booking: React.FC<BookingProps> = ({ data }) => {
             <div className="flex justify-end gap-5 flex-col md:flex-row">
               <Button
                 onClick={onReset}
-                type="reset"
+                type="button"
                 variant="outline"
                 className="px-10"
               >
