@@ -26,7 +26,7 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
       <div className="container mx-auto lg:py-20 py-10">
         <div>
           <div className="flex justify-between items-center mb-10 flex-wrap gap-10">
-            <h2 className="text-main-orange">
+            <h2 className="text-main-orange line-clamp-1">
               <span>{data?.title}</span>
             </h2>
             <button
@@ -58,8 +58,8 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
             >
               {data?.cases?.map((caseItem, idx) => (
                 <SwiperSlide key={caseItem?.tagline}>
-                  <div className="flex items-center justify-center">
-                    <div className="flex flex-col gap-4">
+                  <div className="flex items-center justify-center h-full cursor-pointer">
+                    <div className="flex flex-col gap-4 h-full justify-between">
                       <Image
                         src={images[idx]}
                         alt={caseItem?.tagline}
@@ -70,7 +70,7 @@ const Slider: React.FC<SliderProps> = ({ data }) => {
                       <p className="text-main-orange text-lg font-medium">
                         {caseItem?.category}
                       </p>
-                      <p className="text-brown-coffee font-medium text-28">
+                      <p className="text-brown-coffee font-medium text-28 line-clamp-2">
                         {caseItem?.tagline}
                       </p>
                       <p className="text-brown-coffee/80 font-lg line-clamp-2 ml-2 pl-5 border-l-[0.5px] border-silver">

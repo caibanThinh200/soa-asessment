@@ -51,13 +51,14 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
                   damping: 20,
                   delay: 0.2 * (index + 1),
                 }}
-                className="flex flex-col gap-2 items-center"
+                className="flex flex-col gap-2 items-center cursor-pointer group"
               >
                 <Image
                   src={icons[index]}
                   width={28}
                   height={28}
                   alt="mountain"
+                  className="group-hover:scale-125 transition duration-300 ease-in-out"
                 />
                 <p className="text-white text-center">{item}</p>
               </motion.div>

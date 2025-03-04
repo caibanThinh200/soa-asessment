@@ -95,7 +95,7 @@ const Explore: React.FC<ExploreProps> = ({ data }) => {
           >
             {data?.reviews?.map((review, idx) => (
               <SwiperSlide key={idx}>
-                <div className="relative lg:h-[250px] md:h-[165px] h-[70px] rounded-lg overflow-hidden">
+                <div className="relative lg:h-[250px] md:h-[165px] h-[70px] rounded-lg overflow-hidden cursor-pointer">
                   {/* <Image /> */}
                   <Image
                     className="size-full object-cover"

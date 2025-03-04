@@ -67,13 +67,26 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
               width={28}
               height={28}
               alt="mountain"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
             />
-            <Image src="/svg/whale.svg" width={28} height={28} alt="whale" />
-            <Image src="/svg/aim.svg" width={28} height={28} alt="aim" />
+            <Image
+              src="/svg/whale.svg"
+              width={28}
+              height={28}
+              alt="whale"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            />
+            <Image
+              src="/svg/aim.svg"
+              width={28}
+              height={28}
+              alt="aim"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            />
             <div className="flex gap-4">
               <Link href={"/en"} locale="en">
                 <Image
-                  className="size-4 object-cover"
+                  className="size-4 object-cover cursor-pointer hover:scale-110 transition-all duration-300"
                   src="/images/us.png"
                   width={16}
                   height={16}
@@ -82,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
               </Link>
               <Link href={"/fr"} locale="fr">
                 <Image
-                  className="size-4 object-cover"
+                  className="size-4 object-cover cursor-pointer hover:scale-110 transition-all duration-300"
                   src="/svg/france.svg"
                   width={16}
                   height={16}
@@ -90,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
                 />
               </Link>
             </div>
-            <button className="p-4 py-2 rounded-full bg-main-orange">
+            <button className="p-4 py-2 rounded-full bg-main-orange cursor-pointer hover:scale-110 transition-all duration-300">
               <Image
                 src="/svg/arrow-up.svg"
                 width={24}

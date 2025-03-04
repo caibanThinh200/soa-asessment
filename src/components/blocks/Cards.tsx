@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Page } from "@/types/page";
 import Image from "next/image";
@@ -30,8 +30,8 @@ const Cards: React.FC<CardProps> = ({ data }) => {
               <div
                 key={caseItem?.tagline}
                 className={twMerge(
-                  "flex flex-col gap-4",
-                  idx % 2 != 0 && "md:-translate-y-20"
+                  "flex flex-col gap-4 cursor-pointer hover:-translate-y-5 transition-all duration-500",
+                  idx % 2 != 0 && "md:-translate-y-20 hover:-translate-y-24"
                 )}
               >
                 <Image
