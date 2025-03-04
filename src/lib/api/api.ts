@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL:
+    process.env.NEXT_PUBLIC_API_URL || "https://api.test.soa-dev.net/api/v1",
 });
 
 api.interceptors.request.use(async (config) => {

@@ -20,6 +20,18 @@ const Hero: React.FC<HeroProps> = ({ data }) => {
           playsInline
         >
           <source src="/video/hero.mp4" type="video/mp4" />
+          <track
+            src="captions_en.vtt"
+            kind="captions"
+            srcLang="en"
+            label="english_captions"
+          />
+          <track
+            src="captions_fr.vtt"
+            kind="captions"
+            srcLang="fr"
+            label="spanish_captions"
+          />
         </video>
       </div>
       <div className="absolute lg:bottom-10 lg:right-20 bottom-5 right-5 z-20">
